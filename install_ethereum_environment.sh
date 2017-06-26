@@ -1,9 +1,11 @@
 #!/bin/bash
-
+currentDir=$PWD
 ### for testrpc we need nodejs > 6.9.1
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo chmod -R 777 /usr/lib/node_modules
+cd ~
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -g nodejs
+#sudo chmod -R 777 /usr/lib/node_modules
+#sudo chmod -R 777 /home/$USER/.npm
 sudo npm install -g ethereumjs-testrpc
 
 exit -1
