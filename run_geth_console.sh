@@ -8,7 +8,7 @@ DATADIR=./datadirs
 LOGDIR=./logdirs
 PASSWORDFILE=./passwd.txt
 PRIMARY=0
-VERBOSITY=2
+VERBOSITY=3
 
 if [ ! -d "$DATADIR" ]; then
    mkdir "$DATADIR"

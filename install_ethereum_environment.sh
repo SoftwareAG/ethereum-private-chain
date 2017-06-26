@@ -3,12 +3,11 @@ currentDir=$PWD
 ### for testrpc we need nodejs > 6.9.1
 cd ~
 sudo apt-get install build-essential
-curl -sL https://deb.nodesource.com/setup_6.x | bash -
-apt-get install nodejs
-#sudo chmod -R 777 /usr/lib/node_modules
-npm install -g ethereumjs-testrpc
-
-exit -1
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs
+npm install ethereumjs-testrpc
+sudo ln -s ~/node_modules/ethereumjs-testrpc/bin/testrpc /usr/bin/testrpc
+cd $currentDir
 
 ### we need golang in the exact version 1.8.1
 sudo curl -O https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz
@@ -42,6 +41,20 @@ echo
 echo "end geth verification"
 
 ### install solicity compiler
-sudo apt-get install solc
+#sudo apt-get install solc
+#which solc
+
+echo "****** to be done **************"
+echo "*** proper install latest solc compiler ***"
+echo "*********************************"
+exit -1
+cd ~
+sudo apt install cmake
+git clone https://github.com/ethereum/cpp-ethereum.git
+mkdir cpp-ethereum/build
+cd cpp-ethereum/build
+cmake -DJSONRPC=OFF -DMINER=OFF -DETHKEY=OFF -DSERPENT=OFF -DGUI=OFF -DTESTS=OFF -DJSCONSOLE=OFF ..
+make -j4
+sudo make install
 which solc
 
