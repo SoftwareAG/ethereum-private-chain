@@ -1,9 +1,10 @@
 #!/bin/bash
 
 ### for testrpc we need nodejs > 6.9.1
-#sudo apt-get install build-essential libssl-dev
-sudo apt-get install build-essential
-wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash - 
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo chmod -R 777 /usr/lib/node_modules
+sudo npm install -g ethereumjs-testrpc
 
 exit -1
 
