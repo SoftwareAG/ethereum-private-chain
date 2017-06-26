@@ -2,14 +2,12 @@
 currentDir=$PWD
 ### for testrpc we need nodejs > 6.9.1
 cd ~
+sudo apt-get install build-essential
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -g nodejs
-#sudo chmod -R 777 /usr/lib/node_modules
-#sudo chmod -R 777 /home/$USER/.npm
-sudo npm install -g ethereumjs-testrpc
-
-exit -1
-
+sudo apt-get install nodejs
+sudo chmod -R 777 /usr/lib/node_modules
+npm install -g ethereumjs-testrpc
+cd $currentDir
 
 ### we need golang in the exact version 1.8.1
 sudo curl -O https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz
