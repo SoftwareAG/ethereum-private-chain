@@ -1,5 +1,18 @@
 #!/bin/bash
 currentDir=$PWD
+
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+sudo apt-get install solc
+
+echo "***** solc version check ****************"
+echo
+echo
+solc --version
+echo
+echo "*****************************************"
+
 ### for testrpc we need nodejs > 6.9.1
 cd ~
 sudo apt-get install build-essential
@@ -28,7 +41,6 @@ echo "end go verification"
 
 ### gets geth in version 1.6.6
 sudo apt-get install software-properties-common
-sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
 
@@ -39,22 +51,4 @@ geth version
 echo
 echo 
 echo "end geth verification"
-
-### install solicity compiler
-#sudo apt-get install solc
-#which solc
-
-echo "****** to be done **************"
-echo "*** proper install latest solc compiler ***"
-echo "*********************************"
-exit -1
-cd ~
-sudo apt install cmake
-git clone https://github.com/ethereum/cpp-ethereum.git
-mkdir cpp-ethereum/build
-cd cpp-ethereum/build
-cmake -DJSONRPC=OFF -DMINER=OFF -DETHKEY=OFF -DSERPENT=OFF -DGUI=OFF -DTESTS=OFF -DJSCONSOLE=OFF ..
-make -j4
-sudo make install
-which solc
 
