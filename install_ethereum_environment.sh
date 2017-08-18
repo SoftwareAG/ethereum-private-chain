@@ -4,6 +4,7 @@ currentDir=$PWD
 sudo add-apt-repository ppa:ethereum/ethereum
 sudo add-apt-repository ppa:ethereum/ethereum-dev
 sudo apt-get update
+sudo apt-get install jq
 sudo apt-get install solc
 
 echo "***** solc version check ****************"
