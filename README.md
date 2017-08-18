@@ -18,7 +18,7 @@ This tutorial was tested on Ubuntu 16.04. Test on CentOS 7.0 were unsuccessful b
 
 Running the script init_geth.sh will generate the genesis block for the private chain and assign suffient ether to the predefined account[0]. The datadir and log dir is created. Several geth consoles can now be started to work together based on this block chain.
 
-# Creatng a transaction 
+# Creating a transaction 
 
 Running the command run_geth_console will start the cli for Ethereum. This script will also start mining. The outputs of the console should be "tailed" in an additional command shell located in logsdir/<identity>.log.
 
@@ -28,11 +28,19 @@ The result of this action is the transmission of ether from account[0]-wallet to
 
 # Creating a contract
 
-Contracts are written in a language called "solidity" (beside solidity there are currently 2 other languages to describe a contract). The solidity contract greeter.sol is converted via generate_contract.sh into the file greeter.js. This file is loaded via the exec_geth_jsscript.sh specifying doAContract.js as input for the action. The contract execution can be monitored via the log file.
+Contracts are written in a language called "solidity" (beside solidity there are currently 2 other languages to describe a contract). The solidity contract greeter.sol is converted via generate_contract.sh into the file greeter.js. You can run the greeter.js from within geth.
+
+## The following steps are explainng the generation of contract in more detail
+
+1) Create or download a valid solidity contract file.
+2) Run generate_contract <contract file name>.sol
+3) Edit the auto-generated <contract file name>.js and adjust the settings (explaination see inside the file)
+4) In geth run 'loadScript("<contract file name>.js")'. Don't forget the quotes!!!
+5) Wait for the ethereum mining completed message.
 
 # Issues
 
-Currently the address of the contract, which is necessary to state the contract "valid" is undefined. Question is: Is this a Ethereum bug or am I missing something, or is this just a matter of time and resources missing???
+not known
 
   ______________________
 These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.	
