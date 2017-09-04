@@ -38,6 +38,10 @@ Contracts are written in a language called "solidity" (beside solidity there are
 4) In geth run 'loadScript("<contract file name>.js")'. Don't forget the quotes!!!
 5) Wait for the ethereum mining completed message.
 
+# Knowledge
+
+To connect a geth node to an existing node it's crucial that the genesis blocks have the same hash value (use "init" option to handle this), and you can telnet rpc ports on both machines. Use admin.addPeer(...) to connect and admin.peers to query connection. 
+
 # Issues
 
 not known
