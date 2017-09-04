@@ -5,7 +5,8 @@
             "eip155Block": 0,
             "eip158Block": 0
         },
-        "difficulty": "0x40",
+        "difficulty": "0x0",
+        "timestamp": "0x0",
         "gasLimit": "0xC350",
         "coinbase": "0x3333333333333333333333333333333333333333",
         "nonce": "0x0000000000000042",
