@@ -6,7 +6,7 @@ contract auction {
     mapping(address => uint) refunds;
 
     function bid() payable external {
-        if (msg.value < highestBid) throw;
+        if (msg.value < highestBid) revert();
 
         if (highestBidder != 0) {
             refunds[highestBidder] += highestBid; // record the refund that this user can claim
@@ -15,6 +15,16 @@ contract auction {
         highestBidder = msg.sender;
         highestBid = msg.value;
     }
+
+    function getHighestBidder()
+       returns (address hghstBidder) {
+       return highestBidder;
+    } 
+
+    function getHighestBid()
+       returns (uint hghstBid) {
+       return highestBid;
+    }    
 
     function withdrawRefund() external {
         uint refund = refunds[msg.sender];
