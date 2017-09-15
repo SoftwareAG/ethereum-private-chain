@@ -9,7 +9,7 @@ NETWORKID=4711
 DATADIR=./datadirs
 PASSWORDFILE=./passwd.txt
 
-option_jungle="--identity $IDENTITY --datadir=$DATADIR/$IDENTITY -verbosity 6 --ipcdisable --port $PORT  --rpc --rpcport $RPCPORT --rpccorsdomain \"*\" --networkid $NETWORKID --nodiscover --rpcapi \"db,eth,net,web3\""
+option_jungle="--dev --identity $IDENTITY --datadir=$DATADIR/$IDENTITY -verbosity 6 --ipcdisable --port $PORT  --rpc --rpcport $RPCPORT --rpccorsdomain \"*\" --networkid $NETWORKID --nodiscover --rpcapi \"db,eth,net,web3\""
 
 if [ ! -d "$DATADIR" ]; then
    mkdir "$DATADIR"
