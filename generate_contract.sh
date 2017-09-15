@@ -57,7 +57,7 @@ do
 done
 
 echo "// replace all <parm1,parm2...,parmn> with the actual values before loading this script" >> $CONTRACTPATH$JSFILE
-echo "// in geth: run loadScript(\""$CONTRACTPATH$JSFILE"\"); and wait ... " >> $CONTRACTPATH$JSFILE
+echo "// in geth: run loadScript(\"$CONTRACTPATH$JSFILE\"); and wait ... " >> $CONTRACTPATH$JSFILE
 echo "// if a contract cannot be mined -> play with the gas" >> $CONTRACTPATH$JSFILE
 echo "// run the following commands in geth to enable contract:" >> $CONTRACTPATH$JSFILE
 echo "// personal.unlockAccount(web3.eth.accounts[0], \"yourPassword\")" >> $CONTRACTPATH$JSFILE
@@ -65,6 +65,7 @@ echo "// eth.getCode(<your contract>.address) -> if you see anything else than \
 echo "// run in geth: <your contract>.<your contracts method>(<params>) to see it working ..." >> $CONTRACTPATH$JSFILE
 echo "// to view contract mining: run txpool.status ..." >> $CONTRACTPATH$JSFILE
 echo "// if you get 'Error: invalid address': provide an address as input var like {from:eth.accounts[0]} ..." >> $CONTRACTPATH$JSFILE
+echo "// Alternatively you can set the default account using 'eth.defaultAccount=eth.accounts[0];'" >> $CONTRACTPATH$JSFILE
 
 
 
