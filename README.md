@@ -40,7 +40,9 @@ Contracts are written in a language called "solidity" (beside solidity there are
 
 # Knowledge
 
-To connect a geth node to an existing node it's crucial that the genesis blocks have the same hash value (use "init" option to handle this), and you can telnet rpc ports on both machines. Use admin.addPeer(...) to connect and admin.peers to query connection. 
+To connect a geth node to an existing node it's crucial that the genesis blocks have the same hash value (use "init" option to handle this), and you can telnet rpc ports on both machines. Use admin.addPeer(...) to connect and admin.peers to query connection.
+
+A good tool for testing seems to be Remix. The cloning address for github is: git clone https://github.com/ethereum/browser-solidity
 
 # Issues
 
