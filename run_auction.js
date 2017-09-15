@@ -1,4 +1,4 @@
-Copy the commands one by one !!!
+Copy the commands one by one into geth !!!
 
 
 eth.defaultAccount=eth.accounts[0];
