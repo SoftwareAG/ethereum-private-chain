@@ -14,6 +14,12 @@ This tutorial was tested on Ubuntu 16.04. Test on CentOS 7.0 were unsuccessful b
 5) cd to ethereum-private-chain dir
 6) run ./install_ethereum_environment.sh
 
+# Ethereum - an introduction
+
+Ethereum is one of many existing blockchains, e.g. Bitcoin, Litecoin, Ripple etc. The reason why I choose Ethereum is that it provides an open development and testing environment (in my case geth) and it provides a varity of access protocols and languages, e.g. JavaScript, Rest, RMI, etc. Additionally Ethereum is the only blockchain I know, which provides so called "smart contracts".
+
+The purpose of this project is to provide an easy to setup access point for interacting with our IntegrationServer. Follow up projects can use this project as a basis for e.g. create a smart contract and monitor the behavior of this contract in a BPM process.
+
 # Initialize the Ethereum private chain
 
 Running the script init_geth.sh will generate the genesis block for the private chain and assign suffient ether to the predefined account[0]. The datadir and log dir is created. Several geth consoles can now be started to work together based on this block chain.
