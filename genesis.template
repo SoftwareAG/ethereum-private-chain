@@ -1,10 +1,4 @@
 {
-        "config": {
-            "chainId": 15,
-            "homesteadBlock": 10,
-            "eip155Block": 0,
-            "eip158Block": 0
-        },
         "difficulty": "0x0",
         "timestamp": "0x0",
         "gasLimit": "0xC350",
