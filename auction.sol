@@ -16,13 +16,11 @@ contract auction {
         highestBid = msg.value;
     }
 
-    function getHighestBidder()
-       returns (address hghstBidder) {
+    function getHighestBidder() constant returns (address hghstBidder) {
        return highestBidder;
     } 
 
-    function getHighestBid()
-       returns (uint hghstBid) {
+    function getHighestBid() constant returns (uint hghstBid) {
        return highestBid;
     }    
 
